@@ -13,10 +13,12 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(vscode.commands.registerCommand('clickytest.runtest', () => {
 		const filePath = activeEditorFilePath();
 
+		if (!filePath) return;
+
 		let activeTextEditor = vscode.window.activeTextEditor;
 		let selected = activeTextEditor?.selection;
 
-		if (filePath && filePath[filePath.length - 1] === 'b') {
+		if (filePath[filePath.length - 1] === 'b') {
 			if (selected && !selected?.isEmpty) {
 				runCmd(`bundle exec ruby -Itest -n ${filePath} ${activeTextEditor?.document.getText(selected)}`);
 			}

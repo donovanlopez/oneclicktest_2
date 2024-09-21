@@ -32,7 +32,7 @@
     "menus": {
       "editor/context": [
         {
-          "when": "resourceLangId == typescript || resourceLangId == typescriptreact",
+          "when": "resourceLangId == typescript || resourceLangId == typescriptreact || resourceLangId == ruby",
           "command": "clickytest.runtest",
           "group": "1testing"
         }
