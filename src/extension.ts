@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 		if (filePath[filePath.length - 1] === 'b') {
 			if (selected && !selected?.isEmpty) {
-				runCmd(`bundle exec ruby -Itest -n ${filePath} ${activeTextEditor?.document.getText(selected)}`);
+				runCmd(`bundle exec ruby -Itest ${filePath} -n ${activeTextEditor?.document.getText(selected)}`);
 			}
 			else {
 				runCmd(`bundle exec ruby -Itest ${filePath}`);
