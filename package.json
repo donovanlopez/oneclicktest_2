@@ -1,10 +1,10 @@
 {
-  "name": "oneclicktest",
-  "displayName": "OneClickTest",
+  "name": "clickytest",
+  "displayName": "Clicky Test",
   "description": "Run tests from the right click menu",
-  "repository": "https://github.com/joelbandi/oneclicktest",
-  "version": "1.0.0",
-  "publisher": "joelbandi",
+  "icon": "images/pinhead_larry.png",
+  "version": "2.4.1",
+  "publisher": "donovanlopez",
   "engines": {
     "vscode": "^1.55.0"
   },
@@ -12,28 +12,28 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:oneclicktest.aboutme",
-    "onCommand:oneclicktest.runtest"
+    "onCommand:clickytest.aboutme",
+    "onCommand:clickytest.runtest"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "oneclicktest.aboutme",
+        "command": "clickytest.aboutme",
         "title": "About Me",
-        "category": "One Click Test"
+        "category": "Clicky Test"
       },
       {
-        "command": "oneclicktest.runtest",
+        "command": "clickytest.runtest",
         "title": "Run Test(s)",
-        "category": "One Click Test"
+        "category": "Clicky Test"
       }
     ],
     "menus": {
       "editor/context": [
         {
-          "when": "resourceLangId == ruby",
-          "command": "oneclicktest.runtest",
+          "when": "resourceLangId == typescript || resourceLangId == typescriptreact",
+          "command": "clickytest.runtest",
           "group": "1testing"
         }
       ]

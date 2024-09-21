@@ -1,3 +1,3 @@
-# oneclicktest README
+# clickytest README
 
-Easily run your tests with one click. Right click in an editor and select `Run Test(s)` to run the whole test file. Highlight the test name and select `Run Test(s)` to just run one test.
+Right click and choose Run Test(s) to run test file.
